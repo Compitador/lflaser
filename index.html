@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LF Laser | Transformando objetos em memórias únicas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        laser: {
+                            dark: '#0B0F19',
+                            card: '#131C31',
+                            blue: '#3B82F6',
+                            cyan: '#06B6D4',
+                            accent: '#2563EB'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 35px rgba(6, 182, 212, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-laser-dark text-gray-100 antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-laser-dark/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo / Nome -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center glow-effect">
+                    <i class="fa-solid fa-wolf-pack-battalion text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-white via-blue-200 to-cyan-400 bg-clip-text text-transparent">
+                    LF LASER
+                </span>
+            </div>
+
+            <!-- Links Desktop -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#inicio" class="hover:text-cyan-400 transition-colors">Início</a>
+                <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
+                <a href="#produtos" class="hover:text-cyan-400 transition-colors">Produtos</a>
+                <a href="#processos" class="hover:text-cyan-400 transition-colors">Como Funciona</a>
+            </nav>
+
+            <!-- Botão WhatsApp CTA -->
+            <div>
+                <a href="https://wa.me/5598984220207?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 glow-effect">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Orçamento</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="pt-20">
+
+        <!-- SEÇÃO HERO COM CARROSSEL AUTOMÁTICO -->
+        <section id="inicio" class="relative py-12 md:py-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Texto de Apresentação -->
+                    <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-950/80 border border-blue-800 text-cyan-400 text-xs font-semibold tracking-wide uppercase">
+                            <i class="fa-solid fa-bolt text-xs"></i>
+                            <span>Personalização de Alta Precisão a Laser</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            Transformando objetos em <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">memórias únicas</span>.
+                        </h1>
+                        <p class="text-gray-400 text-lg sm:text-xl font-normal leading-relaxed">
+                            Especialistas em gravação a laser em garrafas, copos térmicos, placas, retratos, chaveiros e brindes exclusivos para você ou sua empresa.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="https://wa.me/5598984220207?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20personalizações." target="_blank" rel="noopener noreferrer"
+                               class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 glow-hover">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Falar no WhatsApp</span>
+                            </a>
+                            <a href="#produtos" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-gray-800 hover:bg-gray-700 text-gray-200 font-semibold px-6 py-4 rounded-xl transition-all border border-gray-700">
+                                <span>Ver Produtos</span>
+                                <i class="fa-solid fa-arrow-down text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CARROSSEL AUTOMÁTICO DE IMAGENS -->
+                    <div class="lg:col-span-6">
+                        <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-laser-card border border-gray-800 shadow-2xl glow-effect group">
+                            
+                            <!-- Slides (As fotos passam sozinhas) -->
+                            <div id="carousel-track" class="absolute inset-0 flex transition-transform duration-700 ease-in-out">
+                                
+                                <!-- Slide 1 -->
+                                <div class="min-w-full h-full relative flex items-center justify-center bg-gray-900">
+                                    <img src="banner-principal-1.jpg" alt="Banner Principal LF Laser" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x600/131C31/3B82F6?text=banner-principal-1.jpg';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-laser-dark/90 via-transparent to-transparent flex items-end p-6">
+                                        <div>
+                                            <span class="bg-blue-600/80 text-white text-xs px-2.5 py-1 rounded-md font-semibold">Destaque</span>
+                                            <h3 class="text-white text-xl font-bold mt-1">Trabalhos em Destaque</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="min-w-full h-full relative flex items-center justify-center bg-gray-900">
+                                    <img src="garrafas-copos.jpg" alt="Garrafas e Copos Personalizados" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x600/131C31/06B6D4?text=garrafas-copos.jpg';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-laser-dark/90 via-transparent to-transparent flex items-end p-6">
+                                        <div>
+                                            <span class="bg-cyan-600/80 text-white text-xs px-2.5 py-1 rounded-md font-semibold">Linha Térmica</span>
+                                            <h3 class="text-white text-xl font-bold mt-1">Garrafas e Copos</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="min-w-full h-full relative flex items-center justify-center bg-gray-900">
+                                    <img src="placas.jpg" alt="Placas Personalizadas" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x600/131C31/2563EB?text=placas.jpg';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-laser-dark/90 via-transparent to-transparent flex items-end p-6">
+                                        <div>
+                                            <span class="bg-blue-600/80 text-white text-xs px-2.5 py-1 rounded-md font-semibold">Comemoração</span>
+                                            <h3 class="text-white text-xl font-bold mt-1">Placas Exclusivas</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 4 -->
+                                <div class="min-w-full h-full relative flex items-center justify-center bg-gray-900">
+                                    <img src="retratos.jpg" alt="Retratos a Laser" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x600/131C31/1E3A8A?text=retratos.jpg';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-laser-dark/90 via-transparent to-transparent flex items-end p-6">
+                                        <div>
+                                            <span class="bg-cyan-600/80 text-white text-xs px-2.5 py-1 rounded-md font-semibold">Emoção</span>
+                                            <h3 class="text-white text-xl font-bold mt-1">Retratos em Gravação</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Botões de Navegação Manual do Carrossel -->
+                            <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                            <!-- Indicadores (Pontinhos) -->
+                            <div class="absolute bottom-4 right-4 flex space-x-2 z-10">
+                                <button onclick="currentSlide(0)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot-indicator" data-index="0"></button>
+                                <button onclick="currentSlide(1)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot-indicator" data-index="1"></button>
+                                <button onclick="currentSlide(2)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot-indicator" data-index="2"></button>
+                                <button onclick="currentSlide(3)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all dot-indicator" data-index="3"></button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6">
+                        <div class="relative aspect-video rounded-3xl overflow-hidden border border-gray-800 shadow-xl bg-laser-card">
+                            <img src="processos.jpg" alt="Processos LF Laser" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x450/131C31/3B82F6?text=processos.jpg+(Bastidores)';">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6 space-y-6">
+                        <span class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">Sobre a LF Laser</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Precisão tecnológica e afeto em cada detalhe</h2>
+                        <p class="text-gray-400 leading-relaxed">
+                            A **LF Laser** nasceu com o propósito de eternizar momentos. Através de tecnologia de ponta em gravação a laser, transformamos objetos comuns em peças marcantes, personalizadas com nomes, fotos, logotipos e mensagens especiais.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 pt-2">
+                            <div class="bg-laser-card p-4 rounded-2xl border border-gray-800">
+                                <div class="text-cyan-400 text-2xl font-bold mb-1">+100%</div>
+                                <div class="text-gray-400 text-sm">Personalizado para você</div>
+                            </div>
+                            <div class="bg-laser-card p-4 rounded-2xl border border-gray-800">
+                                <div class="text-cyan-400 text-2xl font-bold mb-1">Qualidade</div>
+                                <div class="text-gray-400 text-sm">Acabamento impecável</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PRODUTOS / CATEGORIAS -->
+        <section id="produtos" class="py-20 bg-laser-card/30 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">Catálogo</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Nossas Categorias de Produtos</h2>
+                    <p class="text-gray-400">Trabalhamos com uma ampla linha de itens personalizados para presentes, eventos e empresas.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Card 1: Garrafas e Copos -->
+                    <div class="bg-laser-card rounded-2xl overflow-hidden border border-gray-800 group hover:border-cyan-500 transition-all duration-300 shadow-lg">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="garrafas-copos.jpg" alt="Garrafas e Copos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/131C31/3B82F6?text=garrafas-copos.jpg';">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-white">Garrafas e Copos</h3>
+                            <p class="text-gray-400 text-sm">Copos térmicos e garrafas personalizadas com nome ou brasão.</p>
+                            <a href="https://wa.me/5598984220207?text=Olá!%20Gostaria%20de%20orçamento%20para%20Garrafas%20e%20Copos." target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center space-x-2 text-cyan-400 font-semibold text-sm hover:text-cyan-300 pt-2">
+                                <span>Orçar pelo WhatsApp</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Placas -->
+                    <div class="bg-laser-card rounded-2xl overflow-hidden border border-gray-800 group hover:border-cyan-500 transition-all duration-300 shadow-lg">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="placas.jpg" alt="Placas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/131C31/06B6D4?text=placas.jpg';">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-white">Placas Personalizadas</h3>
+                            <p class="text-gray-400 text-sm">Placas comemorativas, homenagens e identificações corporativas.</p>
+                            <a href="https://wa.me/5598984220207?text=Olá!%20Gostaria%20de%20orçamento%20para%20Placas." target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center space-x-2 text-cyan-400 font-semibold text-sm hover:text-cyan-300 pt-2">
+                                <span>Orçar pelo WhatsApp</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Retratos -->
+                    <div class="bg-laser-card rounded-2xl overflow-hidden border border-gray-800 group hover:border-cyan-500 transition-all duration-300 shadow-lg">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="retratos.jpg" alt="Retratos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/131C31/2563EB?text=retratos.jpg';">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-white">Retratos a Laser</h3>
+                            <p class="text-gray-400 text-sm">Sua foto favorita gravada com precisão em madeira ou metal.</p>
+                            <a href="https://wa.me/5598984220207?text=Olá!%20Gostaria%20de%20orçamento%20para%20Retratos." target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center space-x-2 text-cyan-400 font-semibold text-sm hover:text-cyan-300 pt-2">
+                                <span>Orçar pelo WhatsApp</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Chaveiros e Suportes -->
+                    <div class="bg-laser-card rounded-2xl overflow-hidden border border-gray-800 group hover:border-cyan-500 transition-all duration-300 shadow-lg">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="chaveiros.jpg" alt="Chaveiros" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/600x400/131C31/1E3A8A?text=chaveiros.jpg';">
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-white">Chaveiros e Suportes</h3>
+                            <p class="text-gray-400 text-sm">Brindes corporativos, chaveiros personalizados e suportes exclusivos.</p>
+                            <a href="https://wa.me/5598984220207?text=Olá!%20Gostaria%20de%20orçamento%20para%20Chaveiros." target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center space-x-2 text-cyan-400 font-semibold text-sm hover:text-cyan-300 pt-2">
+                                <span>Orçar pelo WhatsApp</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO COMO FUNCIONA -->
+        <section id="processos" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-cyan-400 font-semibold uppercase tracking-wider text-sm">Passo a Passo</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Como Encomendar o Seu Projeto</h2>
+                    <p class="text-gray-400">É simples e rápido dar vida à sua ideia em poucos passos.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-laser-card p-8 rounded-2xl border border-gray-800 relative">
+                        <div class="text-5xl font-extrabold text-blue-600/30 mb-4">01</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Envie sua Ideia</h3>
+                        <p class="text-gray-400 text-sm">Chame no WhatsApp com a foto, nome ou frase que deseja gravar e qual o objeto de preferência.</p>
+                    </div>
+                    <div class="bg-laser-card p-8 rounded-2xl border border-gray-800 relative">
+                        <div class="text-5xl font-extrabold text-blue-600/30 mb-4">02</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Aprovação</h3>
+                        <p class="text-gray-400 text-sm">Criamos a prévia de como o design vai ficar na peça para você aprovar antes da gravação.</p>
+                    </div>
+                    <div class="bg-laser-card p-8 rounded-2xl border border-gray-800 relative">
+                        <div class="text-5xl font-extrabold text-blue-600/30 mb-4">03</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Gravação e Entrega</h3>
+                        <p class="text-gray-400 text-sm">Realizamos a gravação a laser com máxima precisão e preparamos para entrega ou envio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-laser-card border-t border-gray-800 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center">
+                        <i class="fa-solid fa-wolf-pack-battalion text-white"></i>
+                    </div>
+                    <span class="text-lg font-bold text-white">LF LASER</span>
+                </div>
+                <p class="text-gray-500 text-sm text-center">Transformando objetos em memórias únicas. © 2026 LF Laser. Todos os direitos reservados.</p>
+                <div class="flex items-center space-x-4">
+                    <a href="https://instagram.com/lflaser_" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 flex items-center justify-center transition-colors">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </a>
+                    <a href="https://wa.me/5598984220207" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 flex items-center justify-center transition-colors">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- SCRIPT DO CARROSSEL AUTOMÁTICO -->
+    <script>
+        const track = document.getElementById('carousel-track');
+        const slides = track.children;
+        const dots = document.querySelectorAll('.dot-indicator');
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        let slideInterval;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, idx) => {
+                if (idx === currentIndex) {
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-white', 'w-6');
+                } else {
+                    dot.classList.remove('bg-white', 'w-6');
+                    dot.classList.add('bg-white/50');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function currentSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+            resetTimer();
+        }
+
+        function startTimer() {
+            slideInterval = setInterval(nextSlide, 4000); // Passa a cada 4 segundos
+        }
+
+        function resetTimer() {
+            clearInterval(slideInterval);
+            startTimer();
+        }
+
+        // Iniciar timer automático
+        startTimer();
+        updateCarousel();
+    </script>
+
+</body>
+</html>
